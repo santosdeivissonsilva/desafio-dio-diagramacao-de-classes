@@ -1,5 +1,7 @@
 import AparelhoTelefonico.Contato;
 import AparelhoTelefonico.Telefone;
+import NavegadorInternet.Aba;
+import NavegadorInternet.Navegador;
 import ReprodutorMusical.Musica;
 
 import java.util.Arrays;
@@ -31,6 +33,10 @@ public class iPhone {
 
         System.out.println("-----");
 
-
+        Navegador navegador = new Navegador();
+        Aba[] abas = new Aba[]{new Aba()};
+        navegador.adicionarNovaAba(abas);
+        abas[0].exibirPagina("www.site1.com");
+        navegador.atualizarPagina(abas[0]);
     }
 }
